@@ -1,0 +1,6 @@
+From node:16
+
+WorkDir /my_backend/
+Copy . /my_backend/
+
+CMD node index.js

@@ -1,0 +1,14 @@
+FROM node:16
+
+WORKDIR /my_backend/
+COPY . /my_backend/
+
+<<<<<<< HEAD
+RUN yarn install
+=======
+
+RUN yarn install
+
+
+>>>>>>> ce6ddf76232d33d7b89bbbb48161b9b60a3ed9ce
+CMD yarn start:dev

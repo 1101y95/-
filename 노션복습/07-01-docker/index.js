@@ -1,0 +1,1 @@
+console.log("docker안에서 index.js파일을 실행합니다.")

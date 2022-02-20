@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+  my_backend:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 3000:3000
+
+
+  my_database: 
+      platform: linux/x86_64
+      image: mysql:latest
+      environment:
+          MYSQL_DATABASE: 'myproject'
+<<<<<<< HEAD
+          MYSQL_ROOT_PASSWORD: '11'
+=======
+
+          MYSQL_ROOT_PASSWORD: '11'
+
+>>>>>>> ce6ddf76232d33d7b89bbbb48161b9b60a3ed9ce
+      command:
+          - --character-set-server=utf8mb4
+          - --collation-server=utf8mb4_unicode_ci
+          - --skip-character-set-client-handshake
+      cap_add:
+          - SYS_NICE
+      ports: 
+          - 3306:3306

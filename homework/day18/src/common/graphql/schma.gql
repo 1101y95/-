@@ -1,0 +1,63 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ProductDetail {
+  product_detail_id: String!
+  product_detail_name: String!
+}
+
+type Products {
+  product_id: String!
+  product_name: String!
+  product_price: Int!
+  product_isSale: Boolean!
+  product_isSoldout: Boolean!
+  users: [Users!]!
+  productDetailes: ProductDetail!
+}
+
+type Users {
+  user_number: String!
+  user_id: String!
+  user_email: String!
+  user_name: String!
+  user_phone: String!
+  user_birth: DateTime!
+  user_password: String!
+  user_signup_date: DateTime!
+  user_type: Int!
+  user_company_number: String!
+  user_company_name: String!
+  products: [Products!]!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Address {
+  address_id: String!
+  address_: String!
+  address_code: String!
+  user: Users!
+}
+
+type Query {
+  fetchProducts: [Products!]!
+}
+
+type Mutation {
+  createAddress(address_: String!): Address!
+  createProductDetail(product_detail_name: String!): ProductDetail!
+  createProducts(product_name: String!): Products!
+  updateProduct(product_id: String!, updateProductInput: UpdateProductInput!): Products!
+  createUsers(user_id: String!): Users!
+}
+
+input UpdateProductInput {
+  product_name: String!
+  product_price: Int!
+  product_isSoldout: Boolean!
+}

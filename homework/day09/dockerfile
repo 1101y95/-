@@ -1,0 +1,9 @@
+FROM node:16
+
+WORKDIR /my_backend/
+COPY . /my_backend/
+
+WORKDIR /my_database/
+COPY . /my_databases/
+
+CMD node index.js

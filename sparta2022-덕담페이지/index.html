@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 덕담 페이지</title>
+
+    <meta property="og:title" content="YOON님의 덕담 페이지"/>
+    <meta property="og:description" content="덕담 한마디 남겨주세요!"/>
+    <meta property="og:image" content="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/ogimage.png"/>
+
+    <style>
+
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/Cafe24Ssurround.woff') format('woff');
+        }
+
+        * {
+            font-family: 'Cafe24Ssurround';
+        }
+
+        .background{
+
+            width: 100vw; /*모바일 화면에서 꽉찬 화면으로 만드는거*/
+            height: 100vh;
+
+            max-width: 450px;   /*모바일 화면에서 꽉찬 화면의 리미트*/
+
+            background-image: url("https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/bg_default.png");
+            background-position: center;
+            background-size: cover;
+
+            margin: auto;
+        }
+
+        body, h1, p{
+            margin: 0;
+        }
+
+        .title{
+            color: #3f3732;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding-top: 5vh; /*보는사람의 세로길이에 맞춰서 5%만큼 띄우겠다는 뜻*/
+        }
+
+        .title > h1{
+            font-size: 22px;
+            background-color: white;
+            padding: 8px 16px;
+            border-radius: 16px;
+
+            margin-bottom: 16px;
+        }
+
+        .title > p{
+            font-size: 18px;
+        }
+
+        .title > p >span{
+            font-size: 22px;
+        }
+
+        .btn{
+            background-color: yellowgreen;
+            color: white;
+
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+
+            font-size: 18px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer; /*해당 위치에 마우스를 올리면 손모양으로 변하는 코드(PC)*/
+
+            position: fixed;
+            bottom: 16px;
+
+            left: calc(50% - 150px); /*가운데에 위치 고정하는 코드*/
+        }
+
+        .box > img{
+            width: 70px;
+
+            position: absolute; /*아이콘의 위치를 조정하는 코드*/
+            bottom: 50%;
+            left: 50%;
+        }
+
+    </style>
+
+<script src="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/free_newyear_2022.js"></script>
+<script> let mycode = '3813e57f6cfcd4a8e15ba217d0e0aafb'; </script>
+
+</head>
+<body>
+    <div class="background">
+        <div class="title">
+            <h1>덕담 하나 주면 안 잡아먹~지!</h1>
+            <p>YOON님이 받은 덕담 : <span>3개</span></p>
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="btn">
+            2022 덕담 남기기
+        </div>
+
+    </div>
+</body>
+</html>

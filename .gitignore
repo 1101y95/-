@@ -1,0 +1,6 @@
+node_modules
+jwt-social-kakao.strategy.ts
+jwt-social-naver.strategy.ts
+jwt-social-google.strategy.ts
+
+.env
