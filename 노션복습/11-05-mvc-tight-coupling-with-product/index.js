@@ -1,0 +1,10 @@
+import express from "express"
+import { ProductController } from "./mvc/controller/product.controller";
+
+const app = express();
+
+const productController = new ProductController()
+app.post("/product/buy", productController.buyProduct)
+app.post("/product/refund", productController.refundProduct)
+
+app.listen(3000)
